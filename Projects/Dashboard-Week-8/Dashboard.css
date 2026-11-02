@@ -1,0 +1,152 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f5;
+    padding: 13px;
+}
+
+/* Main Dashboard Grid */
+.dashboard {
+    display: grid;
+
+    grid-template-columns: 1fr 6fr;
+
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+
+    gap: 13px;
+}
+
+/* Header */
+.header {
+    grid-area: head;
+    background-color: #173b4d;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    min-height: 130px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #c5e2e5;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: side;
+    background-color: #a9d6d2;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 300px;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    color: #173b4d;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #173b4d;
+    font-size: 17px;
+}
+
+/* Main Area */
+.main {
+    grid-area: main;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 15px;
+
+    align-content: start;
+}
+
+/* Dashboard Cards */
+.card {
+    background-color: #dcebea;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 110px;
+
+    /* Flexbox inside each card */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: #c3e0dc;
+    transform: translateY(-4px);
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.card-info h3 {
+    color: #173b4d;
+    font-size: 22px;
+}
+
+.card-info p {
+    color: #45636a;
+    margin-top: 5px;
+}
+
+/* Footer */
+.footer {
+    grid-area: foot;
+    background-color: #173b4d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    min-height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+
+    .sidebar {
+        min-height: auto;
+    }
+
+}
