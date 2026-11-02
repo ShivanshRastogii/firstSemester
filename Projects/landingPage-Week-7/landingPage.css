@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* 7.1 NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #173b3a;
+    color: white;
+    padding: 14px 24px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.signup-btn {
+    background-color: #b9efcf;
+    color: #173b3a;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 7.2 HERO BANNER */
+.hero {
+    height: 260px;
+    background-color: #287c72;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.start-btn {
+    background-color: #b9efcf;
+    color: #173b3a;
+    border: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 7.3 COURSES CARDS */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+}
+
+.course-card {
+    flex: 1 1 200px;
+    background-color: #e9f5f0;
+    color: #173b3a;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 12px;
+}
+
+.course-card h3 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.course-card p {
+    font-size: 16px;
+}
+
+/* 7.5 RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .signup-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .courses {
+        padding: 16px;
+    }
+}
